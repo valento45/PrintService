@@ -10,7 +10,7 @@ namespace PrintService
     {
         static void Main(string[] args)
         {
-            PrintService.Services.PrintServic printService = new Services.PrintServic();
+            PrintService.Services.PrintServic<int> printService = new Services.PrintServic<int>();
 
             Console.WriteLine("Quantos valores irá digitar?");
 

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace PrintService.Services
 {
-    class PrintServic
+    class PrintServic<T>
     {
-        int[] X = new int[10];
-        int count = 0;
-        public void AddValue(int value)
+        private T[] X = new T[10];
+        private int count = 0;
+        public void AddValue(T value)
         {
             if (count == 10)
                 throw new Exception("Is full");
@@ -20,7 +20,7 @@ namespace PrintService.Services
             count++;
         }
 
-        public int First()
+        public T First()
         {
             if (count == 0)
                 throw new InvalidOperationException("PrintService está vazio!");
